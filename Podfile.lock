@@ -1,0 +1,25 @@
+PODS:
+  - EFQRCode (6.0.0):
+    - swift_qrcodejs (~> 1.2.0)
+  - QRCode (2.0)
+  - QRCoder (1.1.0)
+
+DEPENDENCIES:
+  - EFQRCode
+  - QRCode
+  - QRCoder
+
+SPEC REPOS:
+  trunk:
+    - EFQRCode
+    - QRCode
+    - QRCoder
+
+SPEC CHECKSUMS:
+  EFQRCode: 27f7ef4382159d79d583d839cdfc596b5ac98c9f
+  QRCode: f98a1886c8f37523704a7512a4c0cd45b34c18a4
+  QRCoder: cbd2bee531cc86d286df7942334cfed94c803ae4
+
+PODFILE CHECKSUM: d74c9324e13900d95f886937fe06b1e6d3a35cf3
+
+COCOAPODS: 1.10.0
