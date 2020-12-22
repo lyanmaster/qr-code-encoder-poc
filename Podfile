@@ -6,7 +6,7 @@ use_frameworks!
 target 'QRCodePOC' do
   # Comment the next line if you don't want to use dynamic frameworks
 
-  # Pods for PlaygroundSimulator
+  # Pods for  
   pod "QRCode"
   pod "EFQRCode"
   pod "QRCoder"

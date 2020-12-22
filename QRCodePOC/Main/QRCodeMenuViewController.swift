@@ -21,7 +21,7 @@ class QRCodeMenuViewController: UIViewController {
 
 extension QRCodeMenuViewController: QRCodeMenuViewDelegate {
     func openEFQRCode() {
-        return
+        present(EFQRCodeViewerViewController(), animated: true, completion: nil)
     }
     
     func openQRCode() {
@@ -29,6 +29,6 @@ extension QRCodeMenuViewController: QRCodeMenuViewDelegate {
     }
     
     func openQRCoder() {
-        return
+        present(QRCoderViewerViewController(), animated: true, completion: nil)
     }
 }

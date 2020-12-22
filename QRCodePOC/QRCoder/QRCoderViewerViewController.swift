@@ -1,15 +1,14 @@
 //
-//  QRCodeViewerViewController.swift
-//  PlaygroundSimulator
+//  QRCoderViewerViewController.swift
+//  QRCodePOC
 //
-//  Created by Lyan Masterson on 17/12/20.
+//  Created by Lyan Miguel on 22/12/20.
 //
 
+import QRCoder
 import UIKit
-import QRCode
 
-class QRCodeViewerViewController: UIViewController {
-    
+class QRCoderViewerViewController: UIViewController {
     private lazy var qrCodeMediumCorrectionView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -43,6 +42,8 @@ class QRCodeViewerViewController: UIViewController {
         return view
     }()
     
+    let generator = QRCodeGenerator()
+    
     override func viewDidLoad() {
         self.view.backgroundColor = .white
         title = "QRCode"
@@ -50,42 +51,28 @@ class QRCodeViewerViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        qrCodeLowCorrectionView.image = {
-            var qrCode = QRCode("LOW ERROR CORRECTION")!
-            qrCode.size = CGSize(width: 200, height: 200)
-            qrCode.color = CIColor(rgba: "8e44ad")
-            qrCode.errorCorrection = .Low
-            return qrCode.image
-        }()
+        generator.correctionLevel = .L
+        qrCodeLowCorrectionView.image = generator.createImage(value: "LOW ERROR CORRECTION",
+                                                              size: CGSize(width: 200, height: 200),
+                                                              encoding: .utf8)
+        generator.correctionLevel = .M
+        qrCodeMediumCorrectionView.image = generator.createImage(value: "MEDIUM ERROR CORRECTION",
+                                                                  size: CGSize(width: 200, height: 200),
+                                                                  encoding: .utf8)
         
-        qrCodeMediumCorrectionView.image = {
-            var qrCode = QRCode("MEDIUM ERROR CORRECTION")!
-            qrCode.size = CGSize(width: 200, height: 200)
-            qrCode.color = CIColor(rgba: "fff")
-            qrCode.backgroundColor = CIColor(rgba: "e74c3c")
-            qrCode.errorCorrection = .Medium
-            return qrCode.image
-        }()
+        generator.correctionLevel = .H
+        qrCodeHighCorrectionView.image = generator.createImage(value: "HIGH ERROR CORRECTION",
+                                                               size: CGSize(width: 200, height: 200),
+                                                               encoding: .utf8)
         
-        qrCodeHighCorrectionView.image = {
-            var qrCode = QRCode("HIGH ERROR CORRECTION")!
-            qrCode.size = CGSize(width: 200, height: 200)
-            qrCode.errorCorrection = .High
-            return qrCode.image
-        }()
-        
-        qrCodeQuartileCorrectionView.image = {
-            var qrCode = QRCode("QUARTILE ERROR CORRECTION")!
-            qrCode.size = CGSize(width: 200, height: 200)
-            qrCode.color = CIColor(rgba: "16a085")
-            qrCode.backgroundColor = CIColor(rgba: "000")
-            qrCode.errorCorrection = .Quartile
-            return qrCode.image
-        }()
+        generator.correctionLevel = .Q
+        qrCodeQuartileCorrectionView.image = generator.createImage(value: "QUARTILE ERROR CORRECTION",
+                                                                   size: CGSize(width: 200, height: 200),
+                                                                   encoding: .utf8)
     }
 }
 
-extension QRCodeViewerViewController: CodeView {
+extension QRCoderViewerViewController: CodeView {
     
     func setupComponents() {
         self.view.addSubview(scrollView)

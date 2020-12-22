@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A365D042592481A00F1AF92 /* QRCoderViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A365D032592481A00F1AF92 /* QRCoderViewerViewController.swift */; };
+		1A365D0825924C2B00F1AF92 /* EFQRCodeViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A365D0725924C2B00F1AF92 /* EFQRCodeViewerViewController.swift */; };
 		520834B58E82A22CD8E5F07A /* Pods_QRCodePOC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA4BF9524D654231AA41A220 /* Pods_QRCodePOC.framework */; };
 		EB1DE107258D4AC80031C75C /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1DE106258D4AC80031C75C /* CodeView.swift */; };
 		EB1DE10A258D4AD30031C75C /* UIColor+Notations.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1DE109258D4AD30031C75C /* UIColor+Notations.swift */; };
@@ -20,9 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		69691891E5DF6EDBB2012274 /* Pods-PlaygroundSimulator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaygroundSimulator.release.xcconfig"; path = "Target Support Files/Pods-PlaygroundSimulator/Pods-PlaygroundSimulator.release.xcconfig"; sourceTree = "<group>"; };
+		1A365D032592481A00F1AF92 /* QRCoderViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCoderViewerViewController.swift; sourceTree = "<group>"; };
+		1A365D0725924C2B00F1AF92 /* EFQRCodeViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EFQRCodeViewerViewController.swift; sourceTree = "<group>"; };
 		7D1AEBB90978D9E2CF057FCB /* Pods-QRCodePOC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QRCodePOC.debug.xcconfig"; path = "Target Support Files/Pods-QRCodePOC/Pods-QRCodePOC.debug.xcconfig"; sourceTree = "<group>"; };
-		B812057F51A3AFBC6BB3C8CC /* Pods-PlaygroundSimulator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaygroundSimulator.debug.xcconfig"; path = "Target Support Files/Pods-PlaygroundSimulator/Pods-PlaygroundSimulator.debug.xcconfig"; sourceTree = "<group>"; };
 		BA4BF9524D654231AA41A220 /* Pods_QRCodePOC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QRCodePOC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D61EB562284A6EDBD04F73 /* Pods-QRCodePOC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QRCodePOC.release.xcconfig"; path = "Target Support Files/Pods-QRCodePOC/Pods-QRCodePOC.release.xcconfig"; sourceTree = "<group>"; };
 		EB1DE106258D4AC80031C75C /* CodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
@@ -50,6 +52,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A365D0625924C0F00F1AF92 /* EFQRCode */ = {
+			isa = PBXGroup;
+			children = (
+				1A365D0725924C2B00F1AF92 /* EFQRCodeViewerViewController.swift */,
+			);
+			path = EFQRCode;
+			sourceTree = "<group>";
+		};
+		1A66563F2590E36200AEB05F /* QRCoder */ = {
+			isa = PBXGroup;
+			children = (
+				1A365D032592481A00F1AF92 /* QRCoderViewerViewController.swift */,
+			);
+			path = QRCoder;
+			sourceTree = "<group>";
+		};
 		EAE220551AB38822D6F7B1E3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +81,8 @@
 			children = (
 				EB343615255C31AA00A629F7 /* AppDelegate.swift */,
 				EB343619255C31AA00A629F7 /* MainViewController.swift */,
+				EB8A0CF1258BC5AF003A0839 /* QRCodeMenuViewController.swift */,
+				EB8A0CF5258BC610003A0839 /* QRCodeMenuView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -117,6 +137,8 @@
 				EB343620255C31AD00A629F7 /* LaunchScreen.storyboard */,
 				EB343623255C31AD00A629F7 /* Info.plist */,
 				EB05C541255DC1A200761CCC /* Main */,
+				1A365D0625924C0F00F1AF92 /* EFQRCode */,
+				1A66563F2590E36200AEB05F /* QRCoder */,
 				EB8A0CF0258BC586003A0839 /* QRCode */,
 				EB1DE10C258D4AE90031C75C /* Shared */,
 			);
@@ -126,8 +148,6 @@
 		EB8A0CF0258BC586003A0839 /* QRCode */ = {
 			isa = PBXGroup;
 			children = (
-				EB8A0CF1258BC5AF003A0839 /* QRCodeMenuViewController.swift */,
-				EB8A0CF5258BC610003A0839 /* QRCodeMenuView.swift */,
 				EB8A0CF9258BE097003A0839 /* QRCodeViewerViewController.swift */,
 			);
 			path = QRCode;
@@ -136,8 +156,6 @@
 		EC2046899F77670D47C9E8B1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B812057F51A3AFBC6BB3C8CC /* Pods-PlaygroundSimulator.debug.xcconfig */,
-				69691891E5DF6EDBB2012274 /* Pods-PlaygroundSimulator.release.xcconfig */,
 				7D1AEBB90978D9E2CF057FCB /* Pods-QRCodePOC.debug.xcconfig */,
 				C8D61EB562284A6EDBD04F73 /* Pods-QRCodePOC.release.xcconfig */,
 			);
@@ -261,9 +279,11 @@
 				EB8A0CF2258BC5AF003A0839 /* QRCodeMenuViewController.swift in Sources */,
 				EB343616255C31AA00A629F7 /* AppDelegate.swift in Sources */,
 				EB1DE107258D4AC80031C75C /* CodeView.swift in Sources */,
+				1A365D0825924C2B00F1AF92 /* EFQRCodeViewerViewController.swift in Sources */,
 				EB8A0CF6258BC610003A0839 /* QRCodeMenuView.swift in Sources */,
 				EB1DE10A258D4AD30031C75C /* UIColor+Notations.swift in Sources */,
 				EB8A0CFA258BE097003A0839 /* QRCodeViewerViewController.swift in Sources */,
+				1A365D042592481A00F1AF92 /* QRCoderViewerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,7 +424,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WML8KA633W;
+				DEVELOPMENT_TEAM = PP9D3G58YF;
 				INFOPLIST_FILE = "$(SRCROOT)/QRCodePOC/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -425,7 +445,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WML8KA633W;
+				DEVELOPMENT_TEAM = PP9D3G58YF;
 				INFOPLIST_FILE = "$(SRCROOT)/QRCodePOC/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
